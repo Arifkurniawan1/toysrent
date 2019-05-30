@@ -56,18 +56,35 @@
 				<!-- Navigation -->
 				<nav id="nav">
 					<ul class="main-menu nav navbar-nav navbar-right">
-					<?php $name=$this->session->userdata('nama');?> 
-						<li><a href="<?php echo site_url('user/get_profile?nama_user='.$name)?>">Profil</a></li>
-						<li><a href="<?php echo site_url('member/daftar_item')?>">Item</a></li>
-                        <li><a href="daftar_barang.html">Barang</a></li>
+						<li><a href="profil.html">Profil</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ITEM
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="penambahan_item.html">Tambah Item</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="daftar_item_admin.html">Daftar Item</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            BARANG
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="penambahan_barang.html">Tambah barang</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="daftar_barang_admin.html">Daftar Barang</a>
+                            </div>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             PESANAN
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pesanan">Buat Pesanan</a>
+                                <a class="dropdown-item" href="buat_pesanan.html">Buat Pesanan</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="pemesanan.html">Daftar Pesanan</a>
+                                <a class="dropdown-item" href="pemesanan_admin.html">Daftar Pesanan</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -75,15 +92,15 @@
                             PENGIRIMAN
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pesanan">Buat Pengiriman</a>
+                                <a class="dropdown-item" href="buat_pengiriman.html">Buat Pengiriman</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_pengiriman.html">Daftar Pengiriman</a>
+                                <a class="dropdown-item" href="daftar_pengiriman_admin.html">Daftar Pengiriman</a>
                             </div>
                         </li>
                         <li><a href="main_admin.html">Chat</a></li>
-                        <li><a href="/daftar_review.html">Review Barang</a></li>
-                        <li><a href="<?php echo site_url();?>">Logout</a></li>
-					</ul>
+                        <li><a href="daftar_review.html">Review Barang</a></li>
+                        <li><a href="login.html">Logout</a></li>
+				</ul>
 				</nav>
 				<!-- /Navigation -->
 
@@ -95,14 +112,14 @@
 		<div id="home" class="hero-area">
 
 			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(/img/kids1.jpg)"></div>
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/kids1.jpg)"></div>
 			<!-- /Backgound Image -->
 
 			<div class="home-wrapper">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8">
-							<h1 class="white-text">Welcome <?php echo $this->session->userdata('nama');?> to Kiddos Toys Rent</h1>
+							<h1 class="white-text">Welcome to Kiddos Toys Rent</h1>
 							<p class="lead white-text">Why own it, when you can babyloan it?</p>
 							<a class="main-button icon-button" href="login.html">Get Started!</a>
                         </div>
@@ -122,36 +139,61 @@
 
 					<div class="col-md-12">
 						<div class="section-header">
-							<h2>Daftar Barang</h2>
-							<p class="lead">Menampilkan daftar Item Barang</p>
+							<h2>Daftar Review Barang</h2>
+							<p class="lead">Menampilkan daftar review Item Barang</p>
 						</div>
 				<div class="table100 ver6 m-b-110">
 					<table data-vertable="ver6">
 						<thead>
 							<tr class="row100 head">
-								<th class="column100 column1" data-column="column1">Id Barang</th>
-								<th class="column100 column2" data-column="column2">Nama Item</th>
-								<th class="column100 column3" data-column="column3">Warna</th>
-								<th class="column100 column4" data-column="column4">Foto</th>
-								<th class="column100 column5" data-column="column5">Kondisi</th>
-                                <th class="column100 column5" data-column="column6">Lama Penggunaan</th>
-                                <th class="column100 column5" data-column="column7">KTP Penyewa</th>
+								<th class="column100 column1" data-column="column1">Id Pengiriman</th>
+								<th class="column100 column2" data-column="column2">Barang</th>
+								<th class="column100 column3" data-column="column3">Review</th>
+								<th class="column100 column4" data-column="column4">Tanggal Review</th>
+								<th class="column100 column5" data-column="column5">Action (Anggota)</th>
 							</tr>
 						</thead>
 						<tbody>
-						<?php
-						foreach($data->result_array() as $i){
-						?>
 							<tr class="row100">
-								<td class="column100 column1" data-column="column1"><?php echo $i['id_barang']; ?></td>
-								<td class="column100 column2" data-column="column2"><?php echo $i['nama_item']; ?></td>
-								<td class="column100 column3" data-column="column3"><?php echo $i['warna']; ?></td>
-								<td class="column100 column4" data-column="column4"><?php echo $i['url_foto']; ?></td>
-								<td class="column100 column5" data-column="column5"><?php echo $i['kondisi']; ?></td>
-                                <td class="column100 column6" data-column="column6"><?php echo $i['lama_penggunaan']; ?></td>
-                                <td class="column100 column7" data-column="column7"><?php echo $i['no_ktp_penyewa']; ?></td>
+								<td class="column100 column1" data-column="column1">1</td>
+								<td class="column100 column2" data-column="column2">Lego Avengers</td>
+								<td class="column100 column3" data-column="column3">Sangat Bagus</td>
+								<td class="column100 column4" data-column="column4">20 April 2019</td>
+								<td class="column100 column5" data-column="column5">Update - Delete </td>
+                                
 							</tr>
-							<?php }?>	
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">2</td>
+								<td class="column100 column2" data-column="column2">Baby Bath Up Sakura</td>
+								<td class="column100 column3" data-column="column3">Bagus</td>
+								<td class="column100 column4" data-column="column4">6 Mei 2019</td>
+								<td class="column100 column5" data-column="column5">Update - Delete </td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">3</td>
+								<td class="column100 column2" data-column="column2">Baby Walker - 103</td>
+								<td class="column100 column3" data-column="column3">Lumayan Bagus</td>
+								<td class="column100 column4" data-column="column4">5 Mei 2019</td>
+								<td class="column100 column5" data-column="column5">Update - Delete</td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">4</td>
+								<td class="column100 column2" data-column="column2">Singer Kit</td>
+								<td class="column100 column3" data-column="column3">Bagus</td>
+								<td class="column100 column4" data-column="column4">1 April 2019</td>
+								<td class="column100 column5" data-column="column5">Update - Delete </td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">105</td>
+								<td class="column100 column2" data-column="column2">Animal Doll</td>
+								<td class="column100 column3" data-column="column3">Kurang Bagus</td>
+								<td class="column100 column4" data-column="column4">28 April 2019</td>
+								<td class="column100 column5" data-column="column5">Update - Delete </td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -403,7 +445,7 @@
 		<div id="contact-cta" class="section">
 
 			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(/img/kids1.jpg)"></div>
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/kids1.jpg)"></div>
 			<!-- Backgound Image -->
 
 			<!-- container -->

@@ -109,7 +109,7 @@
                             </div>
                         </li>
                         <li><a href="main_admin.html">Chat</a></li>
-                        <li><a href="daftar_review.html">Review Barang</a></li>
+                        <li><a href="/daftar_review.html">Review Barang</a></li>
                         <li><a href="<?php echo site_url();?>">Logout</a></li>
 					</ul>
 				</nav>

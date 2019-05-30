@@ -12,13 +12,13 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 
 		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"/>
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
 
 		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="/css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,9 +26,9 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
-		<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
-		<link rel="stylesheet" type="text/css" href="/vendor/perfect-scrollbar/perfect-scrollbar.css">
+		<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+		<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+		<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 
     </head>
 	<body>
@@ -56,33 +56,14 @@
 				<!-- Navigation -->
 				<nav id="nav">
 					<ul class="main-menu nav navbar-nav navbar-right">
-					<?php $name=$this->session->userdata('nama');?> 
-						<li><a href="<?php echo site_url('user/get_profile?nama_user='.$name)?>">Profil</a></li>
-						<li><a href="<?php echo site_url('member/daftar_item')?>">Item</a></li>
-                        <li><a href="daftar_barang.html">Barang</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PESANAN
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pesanan">Buat Pesanan</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="pemesanan.html">Daftar Pesanan</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PENGIRIMAN
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pesanan">Buat Pengiriman</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_pengiriman.html">Daftar Pengiriman</a>
-                            </div>
-                        </li>
-                        <li><a href="main_admin.html">Chat</a></li>
-                        <li><a href="/daftar_review.html">Review Barang</a></li>
-                        <li><a href="<?php echo site_url();?>">Logout</a></li>
+						<li><a href="main.html">Profil</a></li>
+						<li><a href="login.html">Item</a></li>
+                        <li><a href="registrasi_admin.html">Barang</a></li>
+                        <li><a href="registrasi_member.html">Pesanan</a></li>
+                        <li><a href="registrasi_member.html">Pengiriman</a></li>
+                        <li><a href="registrasi_member.html">Chat</a></li>
+                        <li><a href="registrasi_member.html">Review Barang</a></li>
+                        <li><a href="login.html">Logout</a></li>
 					</ul>
 				</nav>
 				<!-- /Navigation -->
@@ -95,14 +76,14 @@
 		<div id="home" class="hero-area">
 
 			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(/img/kids1.jpg)"></div>
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/kids1.jpg)"></div>
 			<!-- /Backgound Image -->
 
 			<div class="home-wrapper">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8">
-							<h1 class="white-text">Welcome <?php echo $this->session->userdata('nama');?> to Kiddos Toys Rent</h1>
+							<h1 class="white-text">Welcome to Kiddos Toys Rent</h1>
 							<p class="lead white-text">Why own it, when you can babyloan it?</p>
 							<a class="main-button icon-button" href="login.html">Get Started!</a>
                         </div>
@@ -122,36 +103,65 @@
 
 					<div class="col-md-12">
 						<div class="section-header">
-							<h2>Daftar Barang</h2>
-							<p class="lead">Menampilkan daftar Item Barang</p>
+							<h2>Daftar Pengiriman Barang</h2>
+							<p class="lead">Menampilkan daftar Pengiriman Item Barang</p>
 						</div>
 				<div class="table100 ver6 m-b-110">
 					<table data-vertable="ver6">
 						<thead>
 							<tr class="row100 head">
-								<th class="column100 column1" data-column="column1">Id Barang</th>
-								<th class="column100 column2" data-column="column2">Nama Item</th>
-								<th class="column100 column3" data-column="column3">Warna</th>
-								<th class="column100 column4" data-column="column4">Foto</th>
-								<th class="column100 column5" data-column="column5">Kondisi</th>
-                                <th class="column100 column5" data-column="column6">Lama Penggunaan</th>
-                                <th class="column100 column5" data-column="column7">KTP Penyewa</th>
+								<th class="column100 column1" data-column="column1">Daftar Barang - Id Pemesanan</th>
+								<th class="column100 column2" data-column="column2">Total Harga</th>
+								<th class="column100 column3" data-column="column3">Tanggal Pengiriman</th>
+								<th class="column100 column4" data-column="column4">Action (Semua User)</th>
+								<th class="column100 column5" data-column="column5">Action (Anggota)</th>
 							</tr>
 						</thead>
 						<tbody>
-						<?php
-						foreach($data->result_array() as $i){
-						?>
 							<tr class="row100">
-								<td class="column100 column1" data-column="column1"><?php echo $i['id_barang']; ?></td>
-								<td class="column100 column2" data-column="column2"><?php echo $i['nama_item']; ?></td>
-								<td class="column100 column3" data-column="column3"><?php echo $i['warna']; ?></td>
-								<td class="column100 column4" data-column="column4"><?php echo $i['url_foto']; ?></td>
-								<td class="column100 column5" data-column="column5"><?php echo $i['kondisi']; ?></td>
-                                <td class="column100 column6" data-column="column6"><?php echo $i['lama_penggunaan']; ?></td>
-                                <td class="column100 column7" data-column="column7"><?php echo $i['no_ktp_penyewa']; ?></td>
+								<td class="column100 column1" data-column="column1">101</td>
+								<td class="column100 column2" data-column="column2">Lego Avengers - 101</td>
+								<td class="column100 column3" data-column="column3">789.999</td>
+								<td class="column100 column4" data-column="column4">20 April 2019</td>
+								<td class="column100 column5" data-column="column5">Update - </td>
+                                <td class="column100 column6" data-column="column6">Delete - Tulis Review </td>
 							</tr>
-							<?php }?>	
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">102</td>
+								<td class="column100 column2" data-column="column2">Baby Bath Up Sakura - 102</td>
+								<td class="column100 column3" data-column="column3">122.999</td>
+								<td class="column100 column4" data-column="column4">6 Mei 2019</td>
+								<td class="column100 column5" data-column="column5">Update - </td>
+                                <td class="column100 column6" data-column="column6">Delete - Tulis Review </td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">103</td>
+								<td class="column100 column2" data-column="column2">Baby Walker - 103</td>
+								<td class="column100 column3" data-column="column3">899.478</td>
+								<td class="column100 column4" data-column="column4">5 Mei 2019</td>
+								<td class="column100 column5" data-column="column5">Update - </td>
+                                <td class="column100 column6" data-column="column6">Delete - Tulis Review </td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">104</td>
+								<td class="column100 column2" data-column="column2">Singer Kit - 104</td>
+								<td class="column100 column3" data-column="column3">127.999</td>
+								<td class="column100 column4" data-column="column4">1 April 2019</td>
+								<td class="column100 column5" data-column="column5">Update - </td>
+                                <td class="column100 column6" data-column="column6">Delete - Tulis Review </td>
+							</tr>
+
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">105</td>
+								<td class="column100 column2" data-column="column2">Animal Doll - 105</td>
+								<td class="column100 column3" data-column="column3">250.588</td>
+								<td class="column100 column4" data-column="column4">28 April 2019</td>
+								<td class="column100 column5" data-column="column5">Update - </td>
+                                <td class="column100 column6" data-column="column6">Delete - Tulis Review </td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -211,7 +221,7 @@
 
 					<div class="col-md-6">
 						<div class="about-img">
-							<img src="/img/gift1.png" alt="">
+							<img src="./img/gift1.png" alt="">
 						</div>
 					</div>
 
@@ -247,7 +257,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="/img/k1.jpg" alt="">
+									<img src="./img/k1.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Parklon SLide</a>
@@ -263,7 +273,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="/img/k2.jpg" alt="">
+									<img src="./img/k2.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Baby Crip Sakura </a>
@@ -279,7 +289,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="/img/k3.jpg" alt="">
+									<img src="./img/k3.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Stroller Oyster</a>
@@ -294,7 +304,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="/img/k4.jpg" alt="">
+									<img src="./img/k4.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Teepee Tent Strip</a>
@@ -316,7 +326,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="/img/k8.jpg" alt="">
+									<img src="./img/k8.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Buble Bee Water</a>
@@ -332,7 +342,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="/img/k5.jpg" alt="">
+									<img src="./img/k5.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Tikes Activty</a>
@@ -348,7 +358,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="/img/k6.jpg" alt="">
+									<img src="./img/k6.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Elle Gogo</a>
@@ -365,7 +375,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="/img/k7.jpg" alt="">
+									<img src="./img/k7.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Dino Gym Kids</a>
@@ -403,7 +413,7 @@
 		<div id="contact-cta" class="section">
 
 			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(/img/kids1.jpg)"></div>
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/kids1.jpg)"></div>
 			<!-- Backgound Image -->
 
 			<!-- container -->
@@ -440,7 +450,7 @@
 					<div class="col-md-6">
 						<div class="footer-logo">
 							<a class="logo" href="index.html">
-								<img src="/img/simbion.png" alt="logo">
+								<img src="./img/simbion.png" alt="logo">
 							</a>
 						</div>
 					</div>
@@ -500,13 +510,13 @@
 
 
 		<!-- jQuery Plugins -->
-		<script type="text/javascript" src="/js/jquery.min.js"></script>
-		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="/js/main.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 		<!--===============================================================================================-->
-		<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
-		<script src="/vendor/bootstrap/js/popper.js"></script>
-		<script src="/vendor/select2/select2.min.js"></script>
+		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<script src="vendor/bootstrap/js/popper.js"></script>
+		<script src="vendor/select2/select2.min.js"></script>
 
 
 	</body>

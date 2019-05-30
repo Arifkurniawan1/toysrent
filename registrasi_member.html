@@ -5,34 +5,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="/img/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="img/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/css/util.css">
-	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('/img/kids.jpg');">
+		<div class="container-login100" style="background-image: url('img/kids.jpg');">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="<?php echo site_url('user/input_mmbr')?>" method="post">
+				<form class="login100-form validate-form">
 					<span class="login100-form-logo">
 						<i class="zmdi zmdi-face"></i>
 					</span>
@@ -40,36 +40,37 @@
 					<span class="login100-form-title p-b-34 p-t-27">
 						Registrasi Member
 					</span>
-					<h3><?php echo $this->session->flashdata('msg');?><h3>
+
 					<div class="wrap-input100 validate-input" data-validate = "Enter Nomor KTP">
-						<input class="input100" type="text" name="no_ktp" placeholder="Nomor KTP">
+						<input class="input100" type="text" name="Nomor KTP" placeholder="Nomor KTP">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
                     
                     <div class="wrap-input100 validate-input" data-validate = "Enter Nama">
-						<input class="input100" type="text" name="nama_lengkap" placeholder="Nama Lengkap">
+						<input class="input100" type="text" name="Nama" placeholder="Nama Lengkap">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter Email">
-						<input class="input100" type="text" name="email" placeholder="Email">
+						<input class="input100" type="password" name="Email" placeholder="Email">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
                     
                     <div class="wrap-input100 validate-input" data-validate = "Enter Tanggal Lahir">
-						<input class="input100" type="date" data-date-format="YYYY-MM-DD" name="tanggal_lahir" placeholder="Tanggal Lahir">
+						<input class="input100" type="text" name="tanggallahir" placeholder="Tanggal Lahir">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
                     
                     <div class="wrap-input100 validate-input" data-validate = "Enter Nomor Telepon">
-						<input class="input100" type="text" name="no_telp" placeholder="Nomor Telepon">
+						<input class="input100" type="text" name="nomortelpon" placeholder="Nomor Telepon">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
                     
                     <div class="wrap-input100 validate-input" data-validate = "Enter Alamat">
-                        <input class="input100" type="text" name="jalan" placeholder="Jalan">
+						<input class="input100" type="text" name="Alamat" placeholder="Alamat">
+                        <input class="input100" type="text" name="Jalan" placeholder="Jalan">
                         <input class="input100" type="text" name="nomor" placeholder="Nomor">
-                        <input class="input100" type="text" name="kota" placeholder="Kota">
+                        <input class="input100" type="text" name="Kota" placeholder="Kota">
                         <input class="input100" type="text" name="kodepos" placeholder="Kode Pos">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
@@ -100,21 +101,21 @@
 	<div id="dropDownSelect1"></div>
 	
 <!--===============================================================================================-->
-	<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="/vendor/animsition/js/animsition.min.js"></script>
+	<script src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="/vendor/bootstrap/js/popper.js"></script>
-	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="/vendor/select2/select2.min.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-	<script src="/vendor/daterangepicker/moment.min.js"></script>
-	<script src="/vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
 <!--===============================================================================================-->
-	<script src="/vendor/countdowntime/countdowntime.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="/js/login.js"></script>
+	<script src="js/login.js"></script>
 
 </body>
 </html>

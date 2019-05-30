@@ -30,7 +30,7 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('img/kids.jpg');">
+		<div class="container-login100" style="background-image: url('/img/kids.jpg');">
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" action="<?php echo site_url('user/input_adm')?>" method="post">
 					<span class="login100-form-logo">
