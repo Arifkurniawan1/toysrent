@@ -12,13 +12,13 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 
 		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"/>
 
 		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="/css/font-awesome.min.css">
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="/css/style.css"/>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,9 +26,9 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-		<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-		<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+		<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+		<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+		<link rel="stylesheet" type="text/css" href="/vendor/perfect-scrollbar/perfect-scrollbar.css">
 
     </head>
 	<body>
@@ -73,9 +73,9 @@
                             BARANG
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="penambahan_barang.html">Tambah barang</a>
+                                <a class="dropdown-item" href="<?php echo site_url('admin/add_barang')?>">Tambah barang</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_barang.html">Daftar Barang</a>
+                                <a class="dropdown-item" href="<?php echo site_url('admin/daftar_barang')?>">Daftar Barang</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -83,9 +83,9 @@
                             level
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="penambahan_level.html">Tambah level</a>
+                                <a class="dropdown-item" href="#">Tambah level</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_level.html">Daftar Level</a>
+                                <a class="dropdown-item" href="#">Daftar Level</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -93,9 +93,9 @@
                             PESANAN
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pemesanan.html">Buat Pesanan</a>
+                                <a class="dropdown-item" href="#">Buat Pesanan</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="pemesanan.html">Daftar Pesanan</a>
+                                <a class="dropdown-item" href="#">Daftar Pesanan</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -109,7 +109,7 @@
                             </div>
                         </li>
                         <li><a href="main_admin.html">Chat</a></li>
-                        <li><a href="daftar_review.html">Review Barang</a></li>
+                        <li><a href="#">Review Barang</a></li>
                         <li><a href="<?php echo site_url();?>">Logout</a></li>
 					</ul>
 				</nav>
@@ -123,7 +123,7 @@
 		<div id="home" class="hero-area">
 
 			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/kids1.jpg)"></div>
+			<div class="bg-image bg-parallax overlay" style="background-image:url(/img/kids1.jpg)"></div>
 			<!-- /Backgound Image -->
 
 			<div class="home-wrapper">
@@ -237,7 +237,7 @@
 
 					<div class="col-md-6">
 						<div class="about-img">
-							<img src="./img/gift1.png" alt="">
+							<img src="/img/gift1.png" alt="">
 						</div>
 					</div>
 
@@ -273,7 +273,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k1.jpg" alt="">
+									<img src="/img/k1.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Parklon SLide</a>
@@ -289,7 +289,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k2.jpg" alt="">
+									<img src="/img/k2.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Baby Crip Sakura </a>
@@ -305,7 +305,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k3.jpg" alt="">
+									<img src="/img/k3.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Stroller Oyster</a>
@@ -320,7 +320,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k4.jpg" alt="">
+									<img src="/img/k4.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Teepee Tent Strip</a>
@@ -342,7 +342,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k8.jpg" alt="">
+									<img src="/img/k8.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Buble Bee Water</a>
@@ -358,7 +358,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k5.jpg" alt="">
+									<img src="/img/k5.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Tikes Activty</a>
@@ -374,7 +374,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k6.jpg" alt="">
+									<img src="/img/k6.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Elle Gogo</a>
@@ -391,7 +391,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k7.jpg" alt="">
+									<img src="/img/k7.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Dino Gym Kids</a>
@@ -429,7 +429,7 @@
 		<div id="contact-cta" class="section">
 
 			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/kids1.jpg)"></div>
+			<div class="bg-image bg-parallax overlay" style="background-image:url(/img/kids1.jpg)"></div>
 			<!-- Backgound Image -->
 
 			<!-- container -->
@@ -466,7 +466,7 @@
 					<div class="col-md-6">
 						<div class="footer-logo">
 							<a class="logo" href="index.html">
-								<img src="./img/simbion.png" alt="logo">
+								<img src="/img/simbion.png" alt="logo">
 							</a>
 						</div>
 					</div>
@@ -526,13 +526,13 @@
 
 
 		<!-- jQuery Plugins -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/js/main.js"></script>
 		<!--===============================================================================================-->
-		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-		<script src="vendor/bootstrap/js/popper.js"></script>
-		<script src="vendor/select2/select2.min.js"></script>
+		<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+		<script src="/vendor/bootstrap/js/popper.js"></script>
+		<script src="/vendor/select2/select2.min.js"></script>
 
 
 	</body>

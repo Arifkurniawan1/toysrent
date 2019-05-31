@@ -73,9 +73,9 @@
                             BARANG
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="penambahan_barang.html">Tambah barang</a>
+                                <a class="dropdown-item" href="<?php echo site_url('admin/add_barang')?>">Tambah barang</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_barang.html">Daftar Barang</a>
+                                <a class="dropdown-item" href="<?php echo site_url('admin/daftar_barang')?>">Daftar Barang</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -83,9 +83,9 @@
                             level
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="penambahan_level.html">Tambah level</a>
+                                <a class="dropdown-item" href="#">Tambah level</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_level.html">Daftar Level</a>
+                                <a class="dropdown-item" href="#">Daftar Level</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -93,9 +93,9 @@
                             PESANAN
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pemesanan.html">Buat Pesanan</a>
+                                <a class="dropdown-item" href="#">Buat Pesanan</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="pemesanan.html">Daftar Pesanan</a>
+                                <a class="dropdown-item" href="#">Daftar Pesanan</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -103,13 +103,13 @@
                             PENGIRIMAN
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pengiriman.html">Buat Pengiriman</a>
+                                <a class="dropdown-item" href="#">Buat Pengiriman</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_pengiriman.html">Daftar Pengiriman</a>
+                                <a class="dropdown-item" href="#">Daftar Pengiriman</a>
                             </div>
                         </li>
                         <li><a href="main_admin.html">Chat</a></li>
-                        <li><a href="daftar_review.html">Review Barang</a></li>
+                        <li><a href="#">Review Barang</a></li>
                         <li><a href="<?php echo site_url();?>">Logout</a></li>
 					</ul>
 				</nav>
@@ -448,7 +448,7 @@
 		<div id="contact-cta" class="section">
 
 			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/kids1.jpg)"></div>
+			<div class="bg-image bg-parallax overlay" style="background-image:url(/img/kids1.jpg)"></div>
 			<!-- Backgound Image -->
 
 			<!-- container -->
@@ -494,7 +494,7 @@
 					<!-- footer nav -->
 					<div class="col-md-6">
 						<ul class="footer-nav">
-							<li><a href="index.html">Home</a></li>
+							<li><a href="<?php echo site_url('admin')?>">Home</a></li>
 							<li><a href="#">Advisory</a></li>
 							<li><a href="#">Rent</a></li>
 							<li><a href="contact.html">Order</a></li>

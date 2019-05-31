@@ -59,30 +59,30 @@
 					<?php $name=$this->session->userdata('nama');?>
 						<li><a href="<?php echo site_url('user/get_profile?nama_user='.$name)?>">Profil</a></li>
 						<li><a href="<?php echo site_url('member/daftar_item')?>">Item</a></li>
-                        <li><a href="daftar_barang.html">Barang</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PESANAN
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pesanan">Buat Pesanan</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="pemesanan.html">Daftar Pesanan</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PENGIRIMAN
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pesanan">Buat Pengiriman</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_pengiriman.html">Daftar Pengiriman</a>
-                            </div>
-                        </li>
-                        <li><a href="main_admin.html">Chat</a></li>
-                        <li><a href="/daftar_review.html">Review Barang</a></li>
-                        <li><a href="<?php echo site_url();?>">Logout</a></li>
+            <li><a href="<?php echo site_url('member/daftar_barang')?>">Barang</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                PESANAN
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Buat Pesanan</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Daftar Pesanan</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                PENGIRIMAN
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Buat Pengiriman</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Daftar Pengiriman</a>
+                </div>
+            </li>
+            <li><a href="#">Chat</a></li>
+            <li><a href="#">Review Barang</a></li>
+            <li><a href="<?php echo site_url();?>">Logout</a></li>
 					</ul>
 				</nav>
 				<!-- /Navigation -->

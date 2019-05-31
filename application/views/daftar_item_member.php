@@ -12,13 +12,13 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 
 		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"/>
 
 		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="/css/font-awesome.min.css">
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="/css/style.css"/>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,9 +26,9 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-		<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-		<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+		<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+		<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+		<link rel="stylesheet" type="text/css" href="/vendor/perfect-scrollbar/perfect-scrollbar.css">
 
     </head>
 	<body>
@@ -56,33 +56,33 @@
 				<!-- Navigation -->
 				<nav id="nav">
 					<ul class="main-menu nav navbar-nav navbar-right">
-					<?php $name=$this->session->userdata('nama');?> 
+					<?php $name=$this->session->userdata('nama');?>
 						<li><a href="<?php echo site_url('user/get_profile?nama_user='.$name)?>">Profil</a></li>
 						<li><a href="<?php echo site_url('member/daftar_item')?>">Item</a></li>
-                        <li><a href="daftar_barang.html">Barang</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PESANAN
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pesanan">Buat Pesanan</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="pemesanan.html">Daftar Pesanan</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PENGIRIMAN
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pesanan">Buat Pengiriman</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_pengiriman.html">Daftar Pengiriman</a>
-                            </div>
-                        </li>
-                        <li><a href="main_admin.html">Chat</a></li>
-                        <li><a href="daftar_review.html">Review Barang</a></li>
-                        <li><a href="<?php echo site_url();?>">Logout</a></li>
+            <li><a href="<?php echo site_url('member/daftar_barang')?>">Barang</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                PESANAN
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Buat Pesanan</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Daftar Pesanan</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                PENGIRIMAN
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Buat Pengiriman</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Daftar Pengiriman</a>
+                </div>
+            </li>
+            <li><a href="main_admin.html">Chat</a></li>
+            <li><a href="daftar_review.html">Review Barang</a></li>
+            <li><a href="<?php echo site_url();?>">Logout</a></li>
 					</ul>
 				</nav>
 				<!-- /Navigation -->
@@ -95,7 +95,7 @@
 		<div id="home" class="hero-area">
 
 			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/kids1.jpg)"></div>
+			<div class="bg-image bg-parallax overlay" style="background-image:url(/img/kids1.jpg)"></div>
 			<!-- /Backgound Image -->
 
 			<div class="home-wrapper">
@@ -104,7 +104,7 @@
 						<div class="col-md-8">
 							<h1 class="white-text">Welcome to Kiddos Toys Rent</h1>
 							<p class="lead white-text">Why own it, when you can babyloan it?</p>
-							<a class="main-button icon-button" href="login.html">Get Started!</a>
+							<a class="main-button icon-button" href="#">Get Started!</a>
                         </div>
 					</div>
 				</div>
@@ -133,11 +133,10 @@
 								<th class="column100 column2" data-column="column2">Nama Item</th>
 								<th class="column100 column3" data-column="column3">Kategori</th>
 								<th class="column100 column4" data-column="column4">Action (User)</th>
-								<th class="column100 column5" data-column="column5">Action (Admin)</th>
 							</tr>
 						</thead>
 						<tbody>
-						<?php 
+						<?php
 						$no=$this->uri->segment('3') + 1;
 						foreach($data->result_array() as $i) {?>
 							<tr class="row100">
@@ -145,10 +144,6 @@
 								<td class="column100 column2" data-column="column2"><?php echo $i['nama_item']; ?></td>
 								<td class="column100 column3" data-column="column3"><?php echo $i['nama_kategori']; ?></td>
 								<td class="column100 column4" data-column="column4" ><a href="<?php echo site_url('member/detail_barang?nama_item='. $i['nama_item'])?>" >Lihat Barang</a></td>
-								<td class="column100 column5" data-column="column5">
-								<button class="login100-form-btn" disabled>Update</button></td> 
-								<td class="column100 column5" data-column="column5">
-								<button class="login100-form-btn" onClick="return doconfirm();" disabled>Delete</button></td> 
 							</tr>
 						<?php }?>
 						</tbody>
@@ -211,7 +206,7 @@
 
 					<div class="col-md-6">
 						<div class="about-img">
-							<img src="./img/gift1.png" alt="">
+							<img src="/img/gift1.png" alt="">
 						</div>
 					</div>
 
@@ -247,7 +242,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k1.jpg" alt="">
+									<img src="/img/k1.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Parklon SLide</a>
@@ -263,7 +258,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k2.jpg" alt="">
+									<img src="/img/k2.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Baby Crip Sakura </a>
@@ -279,7 +274,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k3.jpg" alt="">
+									<img src="/img/k3.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Stroller Oyster</a>
@@ -294,7 +289,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k4.jpg" alt="">
+									<img src="/img/k4.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Teepee Tent Strip</a>
@@ -316,7 +311,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k8.jpg" alt="">
+									<img src="/img/k8.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Buble Bee Water</a>
@@ -332,7 +327,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k5.jpg" alt="">
+									<img src="/img/k5.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Tikes Activty</a>
@@ -348,7 +343,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k6.jpg" alt="">
+									<img src="/img/k6.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Elle Gogo</a>
@@ -365,7 +360,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k7.jpg" alt="">
+									<img src="/img/k7.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Dino Gym Kids</a>
@@ -403,7 +398,7 @@
 		<div id="contact-cta" class="section">
 
 			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/kids1.jpg)"></div>
+			<div class="bg-image bg-parallax overlay" style="background-image:url(/img/kids1.jpg)"></div>
 			<!-- Backgound Image -->
 
 			<!-- container -->
@@ -440,7 +435,7 @@
 					<div class="col-md-6">
 						<div class="footer-logo">
 							<a class="logo" href="index.html">
-								<img src="./img/simbion.png" alt="logo">
+								<img src="/img/simbion.png" alt="logo">
 							</a>
 						</div>
 					</div>
@@ -449,7 +444,7 @@
 					<!-- footer nav -->
 					<div class="col-md-6">
 						<ul class="footer-nav">
-							<li><a href="index.html">Home</a></li>
+							<li><a href="<?php echo site_url('member');?>">Home</a></li>
 							<li><a href="#">Advisory</a></li>
 							<li><a href="#">Rent</a></li>
 							<li><a href="contact.html">Order</a></li>
@@ -500,13 +495,13 @@
 
 
 		<!-- jQuery Plugins -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/js/main.js"></script>
 		<!--===============================================================================================-->
-		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-		<script src="vendor/bootstrap/js/popper.js"></script>
-		<script src="vendor/select2/select2.min.js"></script>
+		<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+		<script src="/vendor/bootstrap/js/popper.js"></script>
+		<script src="/vendor/select2/select2.min.js"></script>
 
 
 	</body>

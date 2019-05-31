@@ -56,7 +56,8 @@
 				<!-- Navigation -->
 				<nav id="nav">
 					<ul class="main-menu nav navbar-nav navbar-right">
-						<li><a href="profil.html">Profil</a></li>
+						<?php $name=$this->session->userdata('nama');?>
+							<li><a href="<?php echo site_url('user/get_profile?nama_user='.$name)?>">Profil</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             ITEM
@@ -72,7 +73,7 @@
                             BARANG
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="penambahan_barang.html">Tambah barang</a>
+                                <a class="dropdown-item" href="<?php echo site_url('admin/add_barang')?>">Tambah barang</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?php echo site_url('admin/daftar_barang')?>">Daftar Barang</a>
                             </div>
@@ -82,9 +83,9 @@
                             PESANAN
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pesanan.html">Buat Pesanan</a>
+                                <a class="dropdown-item" href="#">Buat Pesanan</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="pemesanan_admin.html">Daftar Pesanan</a>
+                                <a class="dropdown-item" href="#">Daftar Pesanan</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -92,14 +93,14 @@
                             PENGIRIMAN
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pengiriman.html">Buat Pengiriman</a>
+                                <a class="dropdown-item" href="#">Buat Pengiriman</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_pengiriman_admin.html">Daftar Pengiriman</a>
+                                <a class="dropdown-item" href="#">Daftar Pengiriman</a>
                             </div>
                         </li>
-                        <li><a href="<?php echo base_url();?>">Chat</a></li>
-                        <li><a href="daftar_review.html">Review Barang</a></li>
-                        <li><a href="login.html">Logout</a></li>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">Review Barang</a></li>
+                        <li><a href="<?php echo base_url();?>">Logout</a></li>
 					</ul>
 				</nav>
 				<!-- /Navigation -->
@@ -483,10 +484,10 @@
 					<!-- footer nav -->
 					<div class="col-md-6">
 						<ul class="footer-nav">
-							<li><a href="index.html">Home</a></li>
+							<li><a href="<?php echo base_url();?>">Home</a></li>
 							<li><a href="#">Advisory</a></li>
 							<li><a href="#">Rent</a></li>
-							<li><a href="contact.html">Order</a></li>
+							<li><a href="#">Order</a></li>
                             <li><a href="#">Login/Register</a></li>
 						</ul>
 					</div>

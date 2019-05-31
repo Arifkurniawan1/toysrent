@@ -56,33 +56,33 @@
 				<!-- Navigation -->
 				<nav id="nav">
 					<ul class="main-menu nav navbar-nav navbar-right">
-					<?php $name=$this->session->userdata('nama');?>
-						<li><a href="<?php echo site_url('user/get_profile?nama_user='.$name)?>">Profil</a></li>
-						<li><a href="<?php echo site_url('member/daftar_item')?>">Item</a></li>
-                        <li><a href="<?php echo site_url('member/daftar_barang')?>">Barang</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PESANAN
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Buat Pesanan</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Daftar Pesanan</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PENGIRIMAN
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="buat_pesanan">Buat Pengiriman</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_pengiriman.html">Daftar Pengiriman</a>
-                            </div>
-                        </li>
-                        <li><a href="main_admin.html">Chat</a></li>
-                        <li><a href="daftar_review.html">Review Barang</a></li>
-                        <li><a href="<?php echo site_url();?>">Logout</a></li>
+						<?php $name=$this->session->userdata('nama');?>
+							<li><a href="<?php echo site_url('user/get_profile?nama_user='.$name)?>">Profil</a></li>
+              <li><a href="<?php echo site_url('member/daftar_item')?>">Item</a></li>
+              <li><a href="<?php echo site_url('member/daftar_barang')?>">Barang</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  PESANAN
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Buat Pesanan</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Daftar Pesanan</a>
+                  </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  PENGIRIMAN
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Buat Pengiriman</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Daftar Pengiriman</a>
+                  </div>
+              </li>
+              <li><a href="#">Chat</a></li>
+              <li><a href="#">Review Barang</a></li>
+              <li><a href="<?php echo base_url();?>">Logout</a></li>
 					</ul>
 				</nav>
 				<!-- /Navigation -->
@@ -102,7 +102,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8">
-							<h1 class="white-text">Welcome  <?php echo $this->session->userdata('nama');?> to Kiddos Toys Rent</h1>
+							<h1 class="white-text">Welcome to Kiddos Toys Rent</h1>
 							<p class="lead white-text">Why own it, when you can babyloan it?</p>
 							<a class="main-button icon-button" href="#">Get Started!</a>
                         </div>
@@ -122,53 +122,42 @@
 
 					<div class="col-md-12">
 						<div class="section-header">
-							<h2>Profil Pengguna</h2>
-							<p class="lead">Menampilkan Informasi Pengguna</p>
+							<h2>Daftar Barang</h2>
+							<p class="lead">Menampilkan daftar Item Barang</p>
 						</div>
 				<div class="table100 ver6 m-b-110">
 					<table data-vertable="ver6">
-					<?php $result=$user->row_array();?>
+						<thead>
+							<tr class="row100 head">
+                <th class="column100 column1" data-column="column1">No.</th>
+								<th class="column100 column2" data-column="column2">Id Barang</th>
+								<th class="column100 column3" data-column="column3">Nama Item</th>
+								<th class="column100 column4" data-column="column4">Warna</th>
+								<th class="column100 column5" data-column="column5">Kondisi</th>
+								<th class="column100 column6" data-column="column6">Action</th>
+							</tr>
+						</thead>
 						<tbody>
-						<tr class="row100 head">
-								<th class="column100 column1" style="text-align:left;" data-column="column1">Nomor KTP 	:</th>
-								<td class="column100 column1" data-column="column1"><?php echo $result['no_ktp']; ?></td>
-							<tr class="row100">
-							<th class="column100 column1" style="text-align:left;" data-column="column1">Nama Lengkap :</th>
-								<td class="column100 column1" data-column="column1"><?php echo $result['nama_lengkap']; ?></td>
-							</tr>
-							<tr class="row100">
-							<th class="column100 column1" style="text-align:left;" data-column="column1">Email :</th>
-								<td class="column100 column1" data-column="column1"><?php echo $result['email']; ?></td>
-							</tr>
-
-							<tr class="row100">
-							<th class="column100 column1" style="text-align:left;" data-column="column1">Tanggal Lahir :</th>
-								<td class="column100 column1" data-column="column1"><?php echo $result['tanggal_lahir']; ?></td>
-							</tr>
-
-							<tr class="row100">
-							<th class="column100 column1" style="text-align:left;" data-column="column1">Nomor Telepon :</th>
-								<td class="column100 column1" data-column="column1"><?php echo $result['no_telp']; ?></td>
-							</tr>
-
-							<tr class="row100">
-							<th class="column100 column1" style="text-align:left;" data-column="column1">Poin :</th>
-								<td class="column100 column1" data-column="column1"><?php echo $result['poin']; ?></td>
-							</tr>
-
-							<tr class="row100">
-							<th class="column100 column1" style="text-align:left;" data-column="column1">Level :</th>
-								<td class="column100 column1" data-column="column1"><?php echo $result['level']; ?></td>
-							</tr>
-
-							<tr class="row100">
-							<th class="column100 column1" style="text-align:left;" data-column="column1">Alamat :</th>
-								<td class="column100 column1" data-column="column1"><?php echo $result['jalan'].' '.$result['nomor'].' '.$result['kota'].' '.$result['kodepos'] ; ?></td>
-							</tr>
-
-
+							<?php
+              $no=$this->uri->segment('3') + 1;
+							foreach($data->result_array() as $i){
+							?>
+								<tr class="row100">
+                  <td class="column100 column1" data-column="column1"><?php echo $no++; ?></td>
+									<td class="column100 column2" data-column="column2"><?php echo $i['id_barang']; ?></td>
+									<td class="column100 column3" data-column="column3"><?php echo $i['nama_item']; ?></td>
+									<td class="column100 column4" data-column="column4"><?php echo $i['warna']; ?></td>
+									<td class="column100 column5" data-column="column5"><?php echo $i['kondisi']; ?></td>
+									<td class="column100 column6" data-column="column6">
+										<form action="<?php echo site_url('member/lihat_barang/'.$i['id_barang']) ?>" method="post" >
+											<button class="login100-form-btn">Lihat detil barang</button>
+										</form>
+									</td>
+								</tr>
+								<?php }?>
 						</tbody>
 					</table>
+          <?php echo $this->pagination->create_links(); ?>
 				</div>
                     </div>
 				<!-- row -->

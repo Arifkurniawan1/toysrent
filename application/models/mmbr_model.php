@@ -18,6 +18,16 @@ class Mmbr_model extends CI_Model
         return $result;
     }
 
+    function get_pag_barang($limit,$offset){
+        $result='';
+        if($offset== NULL){
+            $result = $this->db->query("select * from barang ORDERS LIMIT $limit");
+        }else{
+            $result = $this->db->query("select * from barang ORDERS LIMIT $limit OFFSET $offset");
+        }
+        return $result;
+    }
+
 
 
 }
