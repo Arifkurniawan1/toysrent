@@ -166,33 +166,35 @@
 						</thead>
 						<tbody>
 						<?php
-						
+
 						foreach($data->result_array() as $i){
 						?>
 							<tr class="row100">
-							<form action="<?php echo site_url('admin/delete_item/'.$i['nama']) ?>" method="post" >
-							<form action="<?php echo site_url('admin/update_item/'.$i['nama']) ?>" method="post" >
 								<td class="column100 column1" data-column="column1"> <?php echo $i['nama']; ?> </td>
 								<td class="column100 column2" data-column="column2"> <?php echo $i['deskripsi']; ?></td>
 								<td class="column100 column3" data-column="column3"> <?php echo $i['usia_dari']; ?></td>
 								<td class="column100 column4" data-column="column4"> <?php echo $i['usia_sampai']; ?></td>
-								<td class="column100 column5" data-column="column5"> <?php echo $i['bahan']; ?></td> 
+								<td class="column100 column5" data-column="column5"> <?php echo $i['bahan']; ?></td>
 								<td class="column100 column5" data-column="column6">
-								<button class="login100-form-btn">Update</button></td> 
+									<form action="<?php echo site_url('admin/update_item/'.$i['nama']) ?>" method="post" >
+										<button class="login100-form-btn">Update</button>
+									</form>
+								</td>
 								<td class="column100 column5" data-column="column6">
-								<button class="login100-form-btn" onClick="return doconfirm();">Delete</button></td> 
-								<script>
-									function doconfirm()
-									{
-										job=confirm("Are you sure to delete item?");
-										if(job!=true)
-										{
-											return false;
-										}
-									}
-								</script>
-							</form>
-							</form>
+									<form action="<?php echo site_url('admin/delete_item/'.$i['nama']) ?>" method="post" >
+										<button class="login100-form-btn" onClick="return doconfirm();">Delete</button></td>
+										<script>
+											function doconfirm()
+											{
+												job=confirm("Are you sure to delete item?");
+												if(job!=true)
+												{
+													return false;
+												}
+											}
+										</script>
+									</form>
+								</td>
 							</tr>
 						<?php }?>
 						</tbody>
