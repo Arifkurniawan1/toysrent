@@ -4,18 +4,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin extends CI_Controller {
     function __construct(){
         parent::__construct();
-        $this->load->model('adm_model'); 
-           
+        $this->load->model('adm_model');
+
     }
     public function index(){
         $data['pemesanan']=$this->adm_model->get_pemesanan();
         $this->load->view('main_admin',$data);
     }
-	
+//----------------------------------------------------------------------------------------------------------------
+    //ITEM
     function add_item(){
         $this->load->view('penambahan_item');
     }
-    
     function input_item(){
         $nama=$this->input->post('nama');
         $data_item=$this->adm_model->valid_item(strtolower($nama));
@@ -23,7 +23,7 @@ class Admin extends CI_Controller {
         //();
         if($data_item->num_rows()>0){
             echo $this->session->set_flashdata('msg','item sudah ada');
-			redirect('admin/add_item');
+			      redirect('admin/add_item');
         }
         else{
             $deskripsi=$this->input->post('deskripsi');
@@ -36,22 +36,18 @@ class Admin extends CI_Controller {
             $this->db->query("INSERT INTO kategori_item values ('$nama','$kategori')");
             redirect('admin/daftar_item');
         }
-      
-    
     }
-
     function daftar_item(){
         $item['data']=$this->adm_model->get_item();
         $this->load->view('daftar_item',$item);
     }
-
     function update_item($nama){
         //$nm=$this->input->post($nama);
         $new_nama=urldecode($nama);
-        $item['data']=$this->adm_model->data_update($new_nama);
+        $item['data']=$this->adm_model->item_update($new_nama);
         $this->load->view('update_item',$item);
     }
-    function edit_data(){
+    function edit_item(){
         $nama=$this->input->post('nama');
         $deskripsi=$this->input->post('deskripsi');
         $usia_dari=$this->input->post('usia_dari');
@@ -68,5 +64,42 @@ class Admin extends CI_Controller {
         $this->db->query("Delete from item where nama='$new_nama'");
         redirect('admin/daftar_item');
     }
-
+    //--------------------------------------------------------------------------------------------------------------------------------------
+    //BARANG
+    function daftar_barang(){
+        $item['data']=$this->adm_model->get_barang();
+        $this->load->view('daftar_barang_admin',$item);
+    }
+    function update_barang($id){
+        $new_id=urldecode($id);
+        $item['data']=$this->adm_model->barang_update($new_id);
+        $item['bronze']=$this->adm_model->barang_update_bronze($new_id);
+        $item['silver']=$this->adm_model->barang_update_silver($new_id);
+        $item['gold']=$this->adm_model->barang_update_gold($new_id);
+        $this->load->view('update_barang',$item);
+    }
+    function edit_barang(){
+        $id_barang=$this->input->post('id_barang');
+        $nama_item=$this->input->post('nama');
+        $warna=$this->input->post('warna');
+        $url_foto=$this->input->post('url_foto');
+        $kondisi=$this->input->post('kondisi');
+        $lama_penggunaan=$this->input->post('lama_penggunaan');
+        $bronze_royalty=$this->input->post('bronze_royalty');
+        $bronze_sewa=$this->input->post('bronze_sewa');
+        $silver_royalty=$this->input->post('silver_royalty');
+        $silver_sewa=$this->input->post('silver_sewa');
+        $gold_sewa=$this->input->post('gold_sewa');
+        $gold_royalty=$this->input->post('gold_royalty');
+        $this->db->query("update barang set nama_item='$nama_item',warna='$warna',url_foto='$url_foto',kondisi='$kondisi', lama_penggunaan='$lama_penggunaan' where id_barang='$id_barang'");
+        $this->db->query("update info_barang_level set harga_sewa='$bronze_sewa', porsi_royalti='$bronze_royalty' where id_barang='$id_barang' and nama_level = 'BRONZE'");
+        $this->db->query("update info_barang_level set harga_sewa='$silver_sewa', porsi_royalti='$silver_royalty' where id_barang='$id_barang' and nama_level = 'SILVER'");
+        $this->db->query("update info_barang_level set harga_sewa='$gold_sewa', porsi_royalti='$gold_royalty' where id_barang='$id_barang' and nama_level = 'GOLD'");
+        redirect('admin/daftar_barang');
+    }
+    function delete_barang($id){
+        $new_id=urldecode($id);
+        $this->db->query("Delete from barang where id_barang='$new_id'");
+        redirect('admin/daftar_barang');
+    }
 }

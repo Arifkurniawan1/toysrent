@@ -40,7 +40,7 @@
 				<div class="navbar-header">
 					<!-- Logo -->
 					<div class="navbar-brand">
-						<a class="logo" href="index.html">
+						<a class="logo" href="<?php echo base_url();?>">
 							<!--<img src="./img/sb.png" alt="logo">-->
 						</a>
 					</div>
@@ -56,7 +56,7 @@
 				<!-- Navigation -->
 				<nav id="nav">
 					<ul class="main-menu nav navbar-nav navbar-right">
-					<?php $name=$this->session->userdata('nama');?> 
+					<?php $name=$this->session->userdata('nama');?>
 						<li><a href="<?php echo site_url('user/get_profile?nama_user='.$name)?>">Profil</a></li>
 						<li><a href="<?php echo site_url('member/daftar_item')?>">Item</a></li>
                         <li><a href="daftar_barang.html">Barang</a></li>
@@ -134,8 +134,8 @@
 								<th class="column100 column3" data-column="column3">Warna</th>
 								<th class="column100 column4" data-column="column4">Foto</th>
 								<th class="column100 column5" data-column="column5">Kondisi</th>
-                                <th class="column100 column5" data-column="column6">Lama Penggunaan</th>
-                                <th class="column100 column5" data-column="column7">KTP Penyewa</th>
+                <th class="column100 column5" data-column="column6">Lama Penggunaan</th>
+                <th class="column100 column5" data-column="column7">KTP Penyewa</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -148,10 +148,10 @@
 								<td class="column100 column3" data-column="column3"><?php echo $i['warna']; ?></td>
 								<td class="column100 column4" data-column="column4"><?php echo $i['url_foto']; ?></td>
 								<td class="column100 column5" data-column="column5"><?php echo $i['kondisi']; ?></td>
-                                <td class="column100 column6" data-column="column6"><?php echo $i['lama_penggunaan']; ?></td>
-                                <td class="column100 column7" data-column="column7"><?php echo $i['no_ktp_penyewa']; ?></td>
+                <td class="column100 column6" data-column="column6"><?php echo $i['lama_penggunaan']; ?></td>
+            		<td class="column100 column7" data-column="column7"><?php echo $i['no_ktp_penyewa']; ?></td>
 							</tr>
-							<?php }?>	
+							<?php }?>
 						</tbody>
 					</table>
 				</div>

@@ -12,13 +12,13 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 
 		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"/>
 
 		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="/css/font-awesome.min.css">
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="/css/style.css"/>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,9 +26,9 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-		<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-		<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+		<link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+		<link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+		<link rel="stylesheet" type="text/css" href="/vendor/perfect-scrollbar/perfect-scrollbar.css">
 
     </head>
 	<body>
@@ -61,10 +61,10 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             ITEM
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="penambahan_item.html">Tambah Item</a>
+														<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="<?php echo site_url('admin/add_item')?>">Tambah Item</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_item_admin.html">Daftar Item</a>
+                                <a class="dropdown-item" href="<?php echo site_url('admin/daftar_item')?>">Daftar Item</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -74,7 +74,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="penambahan_barang.html">Tambah barang</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_barang_admin.html">Daftar Barang</a>
+                                <a class="dropdown-item" href="<?php echo site_url('admin/daftar_barang')?>">Daftar Barang</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -97,7 +97,7 @@
                                 <a class="dropdown-item" href="daftar_pengiriman_admin.html">Daftar Pengiriman</a>
                             </div>
                         </li>
-                        <li><a href="main_admin.html">Chat</a></li>
+                        <li><a href="<?php echo base_url();?>">Chat</a></li>
                         <li><a href="daftar_review.html">Review Barang</a></li>
                         <li><a href="login.html">Logout</a></li>
 					</ul>
@@ -112,7 +112,7 @@
 		<div id="home" class="hero-area">
 
 			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/kids1.jpg)"></div>
+			<div class="bg-image bg-parallax overlay" style="background-image:url(/img/kids1.jpg)"></div>
 			<!-- /Backgound Image -->
 
 			<div class="home-wrapper">
@@ -121,7 +121,7 @@
 						<div class="col-md-8">
 							<h1 class="white-text">Welcome to Kiddos Toys Rent</h1>
 							<p class="lead white-text">Why own it, when you can babyloan it?</p>
-							<a class="main-button icon-button" href="login.html">Get Started!</a>
+							<a class="main-button icon-button" href="#">Get Started!</a>
                         </div>
 					</div>
 				</div>
@@ -151,54 +151,41 @@
 								<th class="column100 column3" data-column="column3">Warna</th>
 								<th class="column100 column4" data-column="column4">Kondisi</th>
 								<th class="column100 column5" data-column="column5">Action</th>
-                               					<th class="column100 column5" data-column="column6">Action (Admin)</th>
+                <th class="column100 column5" data-column="column6">Action (Admin)</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">1</td>
-								<td class="column100 column2" data-column="column2">Lego Avengers</td>
-								<td class="column100 column3" data-column="column3">A</td>
-								<td class="column100 column4" data-column="column4">Tersedia</td>
-								<td class="column100 column5" data-column="column5">Lihat Barang</td>
-                                				<td class="column100 column6" data-column="column6">Update - Delete </td>
-							</tr>
 
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">2</td>
-								<td class="column100 column2" data-column="column2">Baby Bath Up Sakura</td>
-								<td class="column100 column3" data-column="column3">A</td>
-								<td class="column100 column4" data-column="column4">Tersedia</td>
-								<td class="column100 column5" data-column="column5">Lihat Barang</td>
-                                				<td class="column100 column6" data-column="column6">Update - Delete </td>
-							</tr>
-
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">3</td>
-								<td class="column100 column2" data-column="column2">Baby Walker</td>
-								<td class="column100 column3" data-column="column3">A</td>
-								<td class="column100 column4" data-column="column4">Tersedia</td>
-								<td class="column100 column5" data-column="column5">Lihat Barang</td>
-                                				<td class="column100 column6" data-column="column6">Update - Delete </td>
-							</tr>
-
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">4</td>
-								<td class="column100 column2" data-column="column2">Singer Kit</td>
-								<td class="column100 column3" data-column="column3">A</td>
-								<td class="column100 column4" data-column="column4">Tersedia</td>
-								<td class="column100 column5" data-column="column5">Lihat Barang</td>
-                                				<td class="column100 column6" data-column="column6">Update - Delete </td>
-							</tr>
-
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">5</td>
-								<td class="column100 column2" data-column="column2">Animal Doll</td>
-								<td class="column100 column3" data-column="column3">A</td>
-								<td class="column100 column4" data-column="column4">Tersedia</td>
-								<td class="column100 column5" data-column="column5">Lihat Barang</td>
-                                				<td class="column100 column6" data-column="column6">Update - Delete </td>
-							</tr>
+							<?php
+							foreach($data->result_array() as $i){
+							?>
+								<tr class="row100">
+									<td class="column100 column1" data-column="column1"><?php echo $i['id_barang']; ?></td>
+									<td class="column100 column2" data-column="column2"><?php echo $i['nama_item']; ?></td>
+									<td class="column100 column3" data-column="column3"><?php echo $i['warna']; ?></td>
+									<td class="column100 column5" data-column="column5"><?php echo $i['kondisi']; ?></td>
+									<td class="column100 column5" data-column="column6">
+										<form action="<?php echo site_url('admin/update_barang/'.$i['id_barang']) ?>" method="post" >
+											<button class="login100-form-btn">Update</button>
+										</form>
+									</td>
+									<td class="column100 column5" data-column="column6">
+										<form action="<?php echo site_url('admin/delete_barang/'.$i['id_barang']) ?>" method="post" >
+											<button class="login100-form-btn" onClick="return doconfirm();">Delete</button></td>
+											<script>
+												function doconfirm()
+												{
+													job=confirm("Are you sure to delete item?");
+													if(job!=true)
+													{
+														return false;
+													}
+												}
+											</script>
+										</form>
+									</td>
+								</tr>
+								<?php }?>
 						</tbody>
 					</table>
 				</div>
@@ -258,7 +245,7 @@
 
 					<div class="col-md-6">
 						<div class="about-img">
-							<img src="./img/gift1.png" alt="">
+							<img src="/img/gift1.png" alt="">
 						</div>
 					</div>
 
@@ -294,7 +281,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k1.jpg" alt="">
+									<img src="/img/k1.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Parklon SLide</a>
@@ -310,7 +297,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k2.jpg" alt="">
+									<img src="/img/k2.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Baby Crip Sakura </a>
@@ -326,7 +313,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k3.jpg" alt="">
+									<img src="/img/k3.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Stroller Oyster</a>
@@ -341,7 +328,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k4.jpg" alt="">
+									<img src="/img/k4.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Teepee Tent Strip</a>
@@ -363,7 +350,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k8.jpg" alt="">
+									<img src="/img/k8.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Buble Bee Water</a>
@@ -379,7 +366,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k5.jpg" alt="">
+									<img src="/img/k5.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Tikes Activty</a>
@@ -395,7 +382,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k6.jpg" alt="">
+									<img src="/img/k6.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Elle Gogo</a>
@@ -412,7 +399,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="course">
 								<a href="#" class="course-img">
-									<img src="./img/k7.jpg" alt="">
+									<img src="/img/k7.jpg" alt="">
 									<i class="course-link-icon fa fa-link"></i>
 								</a>
 								<a class="course-title" href="#">Dino Gym Kids</a>
@@ -487,7 +474,7 @@
 					<div class="col-md-6">
 						<div class="footer-logo">
 							<a class="logo" href="index.html">
-								<img src="./img/simbion.png" alt="logo">
+								<img src="/img/simbion.png" alt="logo">
 							</a>
 						</div>
 					</div>
@@ -547,13 +534,13 @@
 
 
 		<!-- jQuery Plugins -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/js/main.js"></script>
 		<!--===============================================================================================-->
-		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-		<script src="vendor/bootstrap/js/popper.js"></script>
-		<script src="vendor/select2/select2.min.js"></script>
+		<script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+		<script src="/vendor/bootstrap/js/popper.js"></script>
+		<script src="/vendor/select2/select2.min.js"></script>
 
 
 	</body>

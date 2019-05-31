@@ -75,7 +75,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="penambahan_barang.html">Tambah barang</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="daftar_barang.html">Daftar Barang</a>
+                                <a class="dropdown-item" href="<?php echo site_url('admin/daftar_barang')?>">Daftar Barang</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -175,9 +175,9 @@
 								<td class="column100 column2" data-column="column2"> <?php echo $i->datetime_pesanan; ?></td>
 								<td class="column100 column3" data-column="column3"> <?php echo $i->kuantitas_barang; ?></td>
 								<td class="column100 column4" data-column="column4"> <?php echo $i->harga_sewa; ?></td>
-								<td class="column100 column5" data-column="column5"> <?php echo $i->ongkos; ?></td> 
+								<td class="column100 column5" data-column="column5"> <?php echo $i->ongkos; ?></td>
 								<td class="column100 column4" data-column="column4"> <?php echo $i->no_ktp_pemesanan; ?></td>
-								<td class="column100 column5" data-column="column5"> <?php echo $i->status; ?></td> 
+								<td class="column100 column5" data-column="column5"> <?php echo $i->status; ?></td>
 							</tr>
 						<?php }?>
 						</tbody>
