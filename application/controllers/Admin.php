@@ -70,6 +70,46 @@ class Admin extends CI_Controller {
         $item['data']=$this->adm_model->get_barang();
         $this->load->view('daftar_barang_admin',$item);
     }
+    function add_barang(){
+        $item['anggota']=$this->adm_model->get_anggota();
+        $this->load->view('penambahan_barang',$item);
+    }
+
+    function input_barang(){
+        $id_barang=$this->input->post('id_barang');
+        $nama_item=$this->input->post('nama_item');
+        $data_item=$this->adm_model->valid_item(strtolower($nama_item));
+        $data_barang=$this->adm_model->valid_barang($id_barang);
+        ///print_r($data_item);
+        //();
+        if($data_item->num_rows()<1){
+            echo $this->session->set_flashdata('msg','item not found, please create one before creating related goods');
+			      redirect('admin/add_barang');
+        }
+        elseif ($data_barang->num_rows()>0) {
+          echo $this->session->set_flashdata('msg','barang yang sama sudah ada');
+          redirect('admin/add_barang');
+        }
+        else{
+            $warna=$this->input->post('warna');
+            $usia_dari=$this->input->post('usia_dari');
+            $url_foto=$this->input->post('url_foto');
+            $kondisi=$this->input->post('kondisi');
+            $lama_penggunaan=$this->input->post('lama_penggunaan');
+            $no_ktp_penyewa=$this->input->post('inlineFormCustomSelect');
+            $bronze_royalty=$this->input->post('bronze_royalty');
+            $bronze_sewa=$this->input->post('bronze_sewa');
+            $silver_royalty=$this->input->post('silver_royalty');
+            $silver_sewa=$this->input->post('silver_sewa');
+            $gold_sewa=$this->input->post('gold_sewa');
+            $gold_royalty=$this->input->post('gold_royalty');
+            $sql="INSERT INTO barang values('$id_barang','$nama_item','$warna','$url_foto','$kondisi','$lama_penggunaan','$no_ktp_penyewa')";
+            $this->db->query($sql);
+            $this->db->query("INSERT INTO info_barang_level values ('$id_barang','BRONZE','$bronze_sewa','$bronze_royalty'), ('$id_barang','SILVER','$silver_sewa','$silver_royalty'), ('$id_barang','GOLD','$gold_sewa','$gold_royalty')");
+            redirect('admin/daftar_barang');
+        }
+    }
+
     function update_barang($id){
         $new_id=urldecode($id);
         $item['data']=$this->adm_model->barang_update($new_id);

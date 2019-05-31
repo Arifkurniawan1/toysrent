@@ -73,7 +73,7 @@
                             BARANG
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="penambahan_barang.html">Tambah barang</a>
+                                <a class="dropdown-item" href="<?php echo site_url('admin/add_barang')?>">Tambah barang</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?php echo site_url('admin/daftar_barang')?>">Daftar Barang</a>
                             </div>

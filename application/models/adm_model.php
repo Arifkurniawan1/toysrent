@@ -24,6 +24,10 @@ class Adm_model extends CI_Model
 
 
     //BARANG
+    function valid_barang($id){
+        $result= $this->db->query("select * from barang where id_barang='$id'");
+        return $result;
+    }
     function get_barang(){
         $result = $this->db->query("select * from barang");
         return $result;
@@ -45,5 +49,10 @@ class Adm_model extends CI_Model
     return $result;
     }
 
+    //ANGGOTA
+    function get_anggota(){
+        $result = $this->db->query("select A.no_ktp, nama_lengkap from anggota A left join pengguna P on P.no_ktp = A.no_ktp");
+        return $result;
+    }
 
 }
