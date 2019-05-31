@@ -78,6 +78,16 @@
                                 <a class="dropdown-item" href="<?php echo site_url('admin/daftar_barang')?>">Daftar Barang</a>
                             </div>
                         </li>
+												<li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            level
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Tambah level</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Daftar Level</a>
+                            </div>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             PESANAN
